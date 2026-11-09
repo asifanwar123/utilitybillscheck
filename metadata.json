@@ -1,0 +1,6 @@
+{
+  "name": "BijliPK.com Design System & Developer Docs",
+  "description": "Developer-oriented knowledge base, API documentation, and tokenized design system specification for BijliPK.com.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

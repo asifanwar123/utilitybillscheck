@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Semantic Color Tokens */
+  --bg: #F3F7F4;
+  --surface-2: #EAF3ED;
+  --text: #0C1F14;
+  --brand-strong: #7DF0B2;
+  --brand-contrast: #FFFFFF;
+  --border-strong: #2B5640;
+  --border-strong-muted: #B5CCBD;
+  --border: #D3E3D8;
+  --text-soft: #CFE3D6;
+  --text-light: #E6F2EA;
+
+  /* Extended Extracted Palette Tokens (25 tokens) */
+  --color-2: #3C4043;
+  --color-3: #4A4A4A;
+  --color-4: #066B33;
+  --color-5: #4B6155;
+  --color-6: #066B33;
+  --color-7: #6A8475;
+  --color-8: #9AA0A6;
+  --color-9: #19C26B;
+  --color-9-light: #C3DCCD;
+  --color-10: #A9C7B5;
+  --color-13: #4DFFA0;
+  --color-14: #DADCE0;
+  --color-14-mint: #DFF3E7;
+  --color-17: #E9F5EE;
+  --color-18: #EDF4EF;
+  --color-20: #E8F0FE;
+  --color-23: #EDF4EF;
+
+  /* Font Families */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Times New Roman', Times, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Type Size Scale (12 sizes) */
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-lg: 14px;
+  --text-xl: 16px;
+  --text-2xl: 17px;
+  --text-3xl: 18px;
+  --text-4xl: 19px;
+  --text-9: 22px;
+  --text-10: 31px;
+  --text-11: 34px;
+  --text-12: 58px;
+
+  /* Spacing Scale (Base: 4px, 28 tokens) */
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-3: 3px;
+  --space-4: 4px;
+  --space-5: 5px;
+  --space-6: 6px;
+  --space-7: 7px;
+  --space-8: 8px;
+  --space-9: 10px;
+  --space-10: 13px;
+  --space-11: 14px;
+  --space-12: 16px;
+  --space-13: 18px;
+  --space-14: 19px;
+  --space-15: 20px;
+  --space-16: 26px;
+  --space-17: 27px;
+  --space-18: 28px;
+  --space-19: 32px;
+  --space-20: 46px;
+  --space-21: 56px;
+  --space-22: 70px;
+  --space-23: 85px;
+  --space-24: 120px;
+  --space-25: 195px;
+  --space-26: 985px;
+  --space-27: 1016px;
+  --space-28: 1027px;
+
+  /* Shape & Border Radius Scale (Pinned to detected set) */
+  --radius-2px: 2px;
+  --radius-top-4px: 4px 4px 0px 0px;
+  --radius-4px: 4px;
+  --radius-5px: 5px;
+  --radius-sm: 14px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-circle: 50%;
+  --radius-full: 999px;
+
+  /* Elevation & Shadow Tokens (7 tokens) */
+  --shadow-sm: rgba(77, 255, 160, 0.38) 0px 0px 0px 3.66727px;
+  --shadow-md: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.08) 0px 1px 3px 0px inset;
+  --shadow-lg: rgba(25, 194, 107, 0.45) 0px 0px 12px 0px;
+  --shadow-xl: rgba(0, 0, 0, 0.5) 0px -4px 12px -4px, rgba(0, 0, 0, 0.3) 0px 4px 8px -3px;
+  --shadow-5: rgba(6, 107, 51, 0.28) 0px 6px 18px 0px;
+  --shadow-6: rgba(255, 255, 255, 0.35) 0px 0px 30px 0px;
+  --shadow-7: rgba(0, 0, 0, 0.28) 0px 30px 80px 0px, rgba(255, 255, 255, 0.12) 0px 1px 0px 0px inset;
+
+  /* Motion Tokens */
+  --transition-base: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  --transition-colors: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 20.16px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tokenized Focus-Visible State (3:1+ contrast with --border-strong and --shadow-sm) */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-6);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
